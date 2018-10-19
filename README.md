@@ -1,6 +1,6 @@
 # Twitter Replication Apps
 
-In this application we try to replicate Twitter as one of popular social media. 
+In this application we try to *replicate Twitter* as one of popular social media. 
 In this *replication apps* you can only sign up, login, and make tweets or status
 
 In **sign up** menu you have to fill :
