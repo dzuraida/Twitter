@@ -109,6 +109,23 @@ class tweeting(Resource):
             json.dump(tweet, outfile)
         return "Tweeted",200
 
+class editTweet(Resource):
+    def put(self):
+        email = request.json["email"]
+        oldTwit = request.json["old tweet"]
+        newTwit = request.json["new tweet"]
+        with open('tweet.txt') as json_file:  
+            tweet = json.load(json_file)
+        for index in range(len(tweet)):
+            if tweet[index]['email'] == email and tweet[index]['tweet'] == oldTwit:
+                tweet[index]['tweet'] = newTwit
+                tweet[index]['time'] = str(datetime.datetime.now())
+                with open('tweet.txt', 'w') as outfile:  
+                    json.dump(tweet, outfile)
+                    outfile.close()
+                return "tweet telah diubah", 201
+            return "tweet tidak ada", 400
+
 class delete(Resource):
     def delete(self):
         with open('tweet.txt') as json_file:  
@@ -122,11 +139,12 @@ class delete(Resource):
                 return "DELETED",200
         return "ERROR",400
 
-twitterrep_api = Blueprint('resources/tweets',__name__)
-api = Api(twitterrep_api)
-api.add_resource(lookuser,'user')
+tweeps_api = Blueprint('resources/tweeps', __name__)
+api = Api(tweeps_api)
+api.add_resource(lookuser, 'user')
 api.add_resource(looktweet,'tweet')
 api.add_resource(login,'login')
 api.add_resource(signup,'signup')
 api.add_resource(tweeting,'tweeting')
+api.add_resource(editTweet, 'tweetedit')
 api.add_resource(delete,'delete')

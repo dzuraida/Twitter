@@ -1,12 +1,12 @@
 from flask import Flask, Blueprint, request
-from twitter_replication import twitterrep_api
+from twitter import tweeps_api
 # from riki_have_this import tweeps_api
 import debugger
-import twitter_replication
+import twitter
 # import riki_have_this
 
 apps = Flask(__name__)
-apps.register_blueprint(twitterrep_api, url_prefix = '/api/v1/')
+apps.register_blueprint(tweeps_api, url_prefix = '/api/v1/')
 # apps.register_blueprint(tweeps_api, url_prefix = '/api/v1/')
 
 @apps.route('/')
