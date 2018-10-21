@@ -1,0 +1,1 @@
+[{"username": "John", "email": "john@haha.com", "password": "Hahaha123", "fullname": "John rukmana"}, {"username": "jeff", "email": "jeff@haha.com", "password": "Hahaha123", "fullname": "John rukmana"}, {"username": "jefri", "email": "jefri@haha.com", "password": "Hahaha123", "fullname": "John rukmana"}]

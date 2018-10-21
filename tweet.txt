@@ -1,0 +1,1 @@
+[{"email": "john@haha.com", "tweet": "Ini ceritanya tweet yah", "time": "2018-10-21 16:17:53.319871"}, {"email": "jeff@haha.com", "tweet": "Ini ceritanya tweet Twitter yah"}, {"email": "jeff@haha.com", "tweet": "Ini ceritanya tweet Twitter yah", "datetime": "2018-10-21 15:23:27.794581"}, 
